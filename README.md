@@ -1,6 +1,6 @@
 # Sensor Fusion Self-Driving Car Course
 
-<p align="center"><img src="media/ObstacleDetectionFPS.gif" width="700" height="400"/></p>
+<p align="center"><img src="docs/ObstacleDetectionFPS.gif" width="700" height="400"/></p>
 
 ### Sensor Fusion course for self-driving cars - Course 1: LIDAR.
 
