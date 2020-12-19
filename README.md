@@ -44,6 +44,9 @@ PS> .\vcpkg install pcl
 
 This is the recommended installation method for Windows users.
 
+In case it is of interest, it is now published the AllInOne installers in PCL's GitHub release page. 
+[Here's](https://github.com/PointCloudLibrary/pcl/releases) the one related to the latest release (scroll all the way down).
+
 ### MAC
 
 #### Install via Homebrew
