@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/ObstacleDetectionFPS.gif" width="700" height="400"/></p>
 
-### Sensor Fusion course for self-driving cars - Course 1: LIDAR.
+### Sensor Fusion course for self-driving cars - Course 1: LIDAR
 
 Introduction. View lidar point clouds with Point Cloud Library (PCL).
 - Point Cloud Segmentation. Program the RANSAC algorithm to segment and remove the  ground plane from a lidar point cloud. 
@@ -29,14 +29,20 @@ $> cd ~
 $> git clone https://github.com/udacity/SFND_Lidar_Obstacle_Detection.git
 $> cd SFND_Lidar_Obstacle_Detection
 $> mkdir build && cd build
-$> cmake ..
-$> make
+$> cmake -G Ninja .. 
+$> ninja	      
 $> ./environment
 ```
 
 ### Windows
 
-https://pointclouds.org/downloads/
+vcpkg is a cross-platform open source package manager created by Microsoft, 
+available for Windows, Linux and macOS. To install PCL on vcpkg-enabled 
+desktops, type the following in your terminal
+
+PS> .\vcpkg install pcl
+
+This is the recommended installation method for Windows users.
 
 ### MAC
 
@@ -60,7 +66,8 @@ https://pointclouds.org/downloads/
 	```
 
 #### Build from Source
+[PCL from source on Linux](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_posix.html)
 
-[PCL Source Github](https://github.com/PointCloudLibrary/pcl)
+[PCL from source on Windows](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_windows.html)
 
-[PCL Mac Compilation Docs](http://www.pointclouds.org/documentation/tutorials/compiling_pcl_macosx.php)
+[PCL Mac Compilation Docs](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_macosx.html)
