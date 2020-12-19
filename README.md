@@ -31,7 +31,7 @@ $> cd SFND_Lidar_Obstacle_Detection
 $> mkdir build && cd build
 $> cmake -G Ninja .. 
 $> ninja	      
-$> ./environment
+$> ./lidar-obstacle-detection 
 ```
 
 ### Windows

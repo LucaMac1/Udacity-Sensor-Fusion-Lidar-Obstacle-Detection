@@ -1,3 +1,3 @@
-#add_library(cluster cluster.cpp)
-
-#target_include_directories(cluster PUBLIC include)
+add_library(sensors INTERFACE)
+target_include_directories(sensors INTERFACE include)
+target_link_libraries(sensors INTERFACE render)
