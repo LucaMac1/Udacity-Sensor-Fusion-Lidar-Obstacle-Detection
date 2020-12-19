@@ -1,9 +1,12 @@
-/* \author Aaron Brown */
-// Quiz on implementing simple RANSAC line fitting
+//===============================================================================//
+// Name        : cluster.cpp
+// Author(s)   : Luca Macchiusi, Aaron Brown (original version)
+// Description : Quiz on implementing simple RANSAC line fitting
+//===============================================================================//
 
-#include "../../render/box.h"
-#include "../../render/render.h"
-#include "kdtree.h"
+#include "render/box.h"
+#include "render/render.h"
+#include "cluster/kdtree.h"
 #include <chrono>
 #include <string>
 #include <unordered_map>

@@ -1,8 +1,11 @@
-/* \author Aaron Brown */
-// Functions and structs used to render the enviroment
-// such as cars and the highway
+//===============================================================================//
+// Name        : processing_point_clouds.h
+// Author(s)   : Luca Macchiusi, Aaron Brown (original version)
+// Description : Functions and structs used to render the enviroment
+//               such as cars and the highway
+//===============================================================================//
 
-#include "render.h"
+#include "render/render.h"
 
 void renderHighway(pcl::visualization::PCLVisualizer::Ptr &viewer) {
 

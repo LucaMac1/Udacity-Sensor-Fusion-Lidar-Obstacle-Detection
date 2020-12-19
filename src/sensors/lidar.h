@@ -1,6 +1,12 @@
+//===============================================================================//
+// Name        : lidar.h
+// Author(s)   : Luca Macchiusi, Aaron Brown (original version)
+// Description : library for processing LIDAR
+//===============================================================================//
+
 #ifndef LIDAR_H
 #define LIDAR_H
-#include "../render/render.h"
+#include "render/render.h"
 #include <chrono>
 #include <ctime>
 

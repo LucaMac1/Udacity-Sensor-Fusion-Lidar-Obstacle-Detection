@@ -1,11 +1,12 @@
-/* \author Aaron Brown */
-// Quiz on implementing simple RANSAC line fitting
+//===============================================================================//
+// Name        : processing_point_clouds.h
+// Author(s)   : Luca Macchiusi, Aaron Brown (original version)
+// Description : Quiz on implementing simple RANSAC line fitting
+//===============================================================================//
 
-#include "../../processPointClouds.h"
-#include "../../render/render.h"
+#include "process_point_clouds/process_oint_clouds.h"
+#include "render/render.h"
 #include <unordered_set>
-// using templates for processPointClouds so also include .cpp to help linker
-#include "../../processPointClouds.cpp"
 #include <ctime>
 
 pcl::PointCloud<pcl::PointXYZ>::Ptr CreateData() {
