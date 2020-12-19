@@ -1,1 +1,1 @@
-add_library(ransac ransac.cpp)
+add_library(ransac ransac2d.cpp)

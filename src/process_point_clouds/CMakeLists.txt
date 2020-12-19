@@ -1,4 +1,0 @@
-add_library(process_point_clouds
-process_point_clouds.cpp)
-
-target_include_directories(process_point_clouds PUBLIC include)

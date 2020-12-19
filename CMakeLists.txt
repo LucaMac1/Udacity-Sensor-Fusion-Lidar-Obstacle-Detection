@@ -10,7 +10,7 @@ set(PROJECT_URL "https://github.com/LucaMac1/Udacity-Sensor-Fusion-Lidar-Obstacl
 cmake_minimum_required(VERSION 3.17)
 project(${PROJECT_NAME} LANGUAGES CXX)
 
-# Find required libraries.
+# Find Packages
 find_package(PCL 1.11 REQUIRED)
 
 # Add target subdirectories.
@@ -22,15 +22,16 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/sensors)
 
 # Define source and header files.
 set(SOURCE_FILES
-    ${CMAKE_CURRENT_SOURCE_FILES}/environment.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/environment.cpp
 )
 set(HEADER_FILES
 )
 
 # Create an executable with required definitions and libraries.
-add_executable(${TARGET_NAME} ${SOURCE_FILES} ${HEADER_FILES)
+add_executable(${TARGET_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 set_target_properties(${TARGET_NAME} PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
 
 # PCL library
 target_include_directories(${TARGET_NAME} PRIVATE ${PCL_INCLUDE_DIRS})
+target_link_directories()
 target_link_libraries(${TARGET_NAME} ${PCL_LIBRARIES} sensors render process_point_clouds)
