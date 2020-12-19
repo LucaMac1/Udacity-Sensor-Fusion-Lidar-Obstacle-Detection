@@ -186,18 +186,20 @@ int main(int argc, char *argv[])
 {
     std::cout << "Starting enviroment" << std::endl;
 
+    std::string dataPath = "../data/pcd/data_2";
+    
     pcl::visualization::PCLVisualizer::Ptr viewer(
         new pcl::visualization::PCLVisualizer("3D Viewer"));
 
     CameraAngle setAngle{XY};
     initCamera(setAngle, viewer);
-    // simpleHighway(viewer);
+    //simpleHighway(viewer);
 
     ProcessPointClouds<pcl::PointXYZI> *pointProcessorI{
         new ProcessPointClouds<pcl::PointXYZI>()};
 
     std::vector<boost::filesystem::path> stream{
-        pointProcessorI->streamPcd("../src/sensors/data/pcd/data_1")};
+        pointProcessorI->streamPcd(dataPath)};
 
     auto streamIterator{stream.begin()};
 
