@@ -1,8 +1,8 @@
-# Sensor Fusion Self-Driving Car Course
+# Sensor Fusion Self-Driving Car Course - Part 1
 
 <p align="center"><img src="docs/ObstacleDetectionFPS.gif" width="700" height="400"/></p>
 
-### Sensor Fusion course for self-driving cars - Course 1: LIDAR
+### Sensor Fusion course for self-driving cars - LIDAR
 
 Introduction. View lidar point clouds with Point Cloud Library (PCL).
 - Point Cloud Segmentation. Program the RANSAC algorithm to segment and remove the ground plane from a LIDAR point cloud. 
@@ -15,6 +15,8 @@ Introduction. View lidar point clouds with Point Cloud Library (PCL).
 **Radar** data is typically very sparse and in a limited range, however it can directly tell us how fast an object is moving in a certain direction. This ability makes radars a very practical sensor for doing things like cruise control where its important to know how fast the car in front of you is travelling. Radar sensors are also very affordable and common nowadays in newer cars.
 
 **Sensor Fusion** by combing LIDAR's high resolution imaging with radar's ability to measure velocity of objects, we can get a better understanding of the surrounding environment than we could using one of the sensors alone.
+
+GOAL: Process raw lidar data with filtering, segmentation, and clustering to detect other vehicles on the road.
 
 ## Installation
 
