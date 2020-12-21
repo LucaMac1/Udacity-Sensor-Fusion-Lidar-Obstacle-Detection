@@ -5,19 +5,16 @@
 ### Sensor Fusion course for self-driving cars - Course 1: LIDAR
 
 Introduction. View lidar point clouds with Point Cloud Library (PCL).
-- Point Cloud Segmentation. Program the RANSAC algorithm to segment and remove the  ground plane from a lidar point cloud. 
-- Clustering. Draw bounding boxes around objects (e.g. vehicles and pedestrians) by grouping points 
-		with Euclidean clustering and k-d trees. 
-- Real Point Cloud Data. Apply segmentation and clustering to data streaming from a lidar  sensor on a real self-driving car. 
+- Point Cloud Segmentation. Program the RANSAC algorithm to segment and remove the ground plane from a LIDAR point cloud. 
+- Clustering. Draw bounding boxes around objects (e.g. vehicles and pedestrians) by grouping points with Euclidean clustering and k-d trees. 
+- Real Point Cloud Data. Apply segmentation and clustering to data streaming from a LIDAR sensor on a real self-driving car. 
 - Lidar Obstacle Detection Project. Filter, segment, and cluster real LIDAR point cloud data to detect vehicles and other objects.
 
-In this course we will be talking about sensor fusion, which is the process of taking data from multiple sensors and combining it to give us a better understanding of the world around us. We will mostly be focusing on two sensors, LIDAR, and radar. By the end we will be fusing the data from these two sensors to track multiple cars on the road, estimating their positions and speed.
-
 **Lidar** sensing gives us high resolution data by sending out thousands of laser signals. These lasers bounce off objects, returning to the sensor where we can then determine how far away objects are by timing how long it takes for the signal to return. Also, we can tell a little bit about the object that was hit by measuring the intensity of the returned signal. Each laser ray is in the infrared spectrum, and is sent out at many different angles, usually in a 360 degree range. Whilst LIDAR sensors gives us very high accurate models for the world around us in 3D, they are still quite expensive.
-**Radar** data is typically very sparse and in a limited range, however it can directly tell us how fast an object is moving in a certain direction. This ability makes radars a very practical sensor for doing things like cruise control where its important to know how fast the car in front of you is traveling. Radar sensors are also very affordable and common now of days in newer cars.
 
-**Sensor Fusion** by combing LIDAR's high resolution imaging with radar's ability to measure velocity of objects we can get a better understanding of the surrounding environment than we could using one of the sensors alone.
+**Radar** data is typically very sparse and in a limited range, however it can directly tell us how fast an object is moving in a certain direction. This ability makes radars a very practical sensor for doing things like cruise control where its important to know how fast the car in front of you is travelling. Radar sensors are also very affordable and common nowadays in newer cars.
 
+**Sensor Fusion** by combing LIDAR's high resolution imaging with radar's ability to measure velocity of objects, we can get a better understanding of the surrounding environment than we could using one of the sensors alone.
 
 ## Installation
 
@@ -34,6 +31,8 @@ $> ninja
 $> ./lidar-obstacle-detection 
 ```
 
+For more information about the PCL installation on Ubuntu, [check this out](https://pointclouds.org/downloads/#linux)
+
 ### Windows
 
 vcpkg is a cross-platform open source package manager created by Microsoft, 
@@ -42,7 +41,7 @@ desktops, type the following in your terminal
 
 PS> .\vcpkg install pcl
 
-This is the recommended installation method for Windows users.
+For more information about the PCL installation on Ubuntu, [check this out](https://pointclouds.org/downloads/)
 
 In case it is of interest, it is now published the AllInOne installers in PCL's GitHub release page. 
 [Here's](https://github.com/PointCloudLibrary/pcl/releases) the one related to the latest release (scroll all the way down).
@@ -67,7 +66,6 @@ In case it is of interest, it is now published the AllInOne installers in PCL's 
 	```bash
 	$> brew install pcl
 	```
-
 #### Build from Source
 [PCL from source on Linux](https://pcl-tutorials.readthedocs.io/en/latest/compiling_pcl_posix.html)
 
