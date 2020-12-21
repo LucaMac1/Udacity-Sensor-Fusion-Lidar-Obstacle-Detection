@@ -12,6 +12,7 @@ project(${PROJECT_NAME} LANGUAGES CXX)
 
 # Find Packages
 find_package(PCL 1.11 REQUIRED)
+message(PCL_ROOT "${PCL_ROOT}")
 
 # Add target subdirectories.
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/cluster)
@@ -19,8 +20,6 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/process_point_clouds)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/ransac)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/render)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/sensors)
-
-# set(PPC_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/src/process_point_clouds")
 
 # Define source and header files.
 set(SOURCE_FILES
@@ -34,5 +33,5 @@ add_executable(${TARGET_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 set_target_properties(${TARGET_NAME} PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
 
 # PCL library
-target_include_directories(${TARGET_NAME} PRIVATE ${PCL_INCLUDE_DIRS} ${PPC_INCLUDE_DIRS})
+target_include_directories(${TARGET_NAME} PRIVATE ${PCL_INCLUDE_DIRS})
 target_link_libraries(${TARGET_NAME} ${PCL_LIBRARIES} sensors render process_point_clouds)
