@@ -16,7 +16,7 @@ Introduction. View lidar point clouds with Point Cloud Library (PCL).
 
 **Sensor Fusion** by combing LIDAR's high resolution imaging with radar's ability to measure velocity of objects, we can get a better understanding of the surrounding environment than we could using one of the sensors alone.
 
-GOAL: Process raw lidar data with filtering, segmentation, and clustering to detect other vehicles on the road.
+`GOAL: Process raw LIDAR data with filtering, segmentation, and clustering to detect other vehicles on the road.`
 
 ## Installation
 
